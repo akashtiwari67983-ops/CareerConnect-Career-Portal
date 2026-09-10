@@ -1,0 +1,193 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Frontend Developer",
+      "company": "TechCorp",
+      "location": "Mumbai, MH",
+      "salary": "₹9,00,000 - ₹12,00,000",
+      "category": "technology",
+      "type": "full-time",
+      "description": "We are looking for a skilled Frontend Developer to join our team...",
+      "requirements": "3+ years of experience with React, HTML, CSS."
+    },
+    {
+      "id": 2,
+      "title": "Marketing Manager",
+      "company": "BrandBoost",
+      "location": "Delhi, DL",
+      "salary": "₹8,00,000 - ₹10,00,000",
+      "category": "marketing",
+      "type": "full-time",
+      "description": "Seeking an experienced Marketing Manager...",
+      "requirements": "5+ years of marketing experience."
+    },
+    {
+      "id": 3,
+      "title": "UX/UI Designer",
+      "company": "DesignStudio",
+      "location": "Remote",
+      "salary": "₹8,50,000 - ₹11,00,000",
+      "category": "technology",
+      "type": "remote",
+      "description": "Looking for a creative UX/UI Designer...",
+      "requirements": "Portfolio demonstrating UX/UI skills."
+    },
+    {
+      "id": 4,
+      "title": "Backend Node.js Developer",
+      "company": "ServerTech",
+      "location": "Pune, MH",
+      "salary": "₹10,00,000 - ₹15,00,000",
+      "category": "technology",
+      "type": "full-time",
+      "description": "Develop scalable APIs using Node.js and Express.",
+      "requirements": "Strong knowledge of Node.js, REST APIs, and MongoDB."
+    },
+    {
+      "id": 5,
+      "title": "Digital Marketing Specialist",
+      "company": "AdGrowth",
+      "location": "Bangalore, KA",
+      "salary": "₹6,00,000 - ₹9,00,000",
+      "category": "marketing",
+      "type": "full-time",
+      "description": "Manage Google Ads and Facebook marketing campaigns.",
+      "requirements": "Proven experience in PPC scaling and ROI."
+    },
+    {
+      "id": 6,
+      "title": "Senior Financial Analyst",
+      "company": "Capital Dynamics",
+      "location": "Mumbai, MH",
+      "salary": "₹12,00,000 - ₹18,00,000",
+      "category": "finance",
+      "type": "full-time",
+      "description": "Analyze financial data and provide strategic recommendations.",
+      "requirements": "CFA or CA required with 4+ years of experience."
+    },
+    {
+      "id": 7,
+      "title": "Clinical Nurse Supervisor",
+      "company": "Apollo Lifecare",
+      "location": "Chennai, TN",
+      "salary": "₹7,00,000 - ₹10,00,000",
+      "category": "healthcare",
+      "type": "full-time",
+      "description": "Oversee nursing staff and ensure highest quality patient care.",
+      "requirements": "BSc Nursing, RN License, and 5+ years of clinical experience."
+    },
+    {
+      "id": 8,
+      "title": "Mathematics Professor",
+      "company": "Global Tech University",
+      "location": "Hyderabad, TS",
+      "salary": "₹15,00,000 - ₹20,00,000",
+      "category": "education",
+      "type": "full-time",
+      "description": "Teach advanced mathematics to undergraduate and postgraduate students.",
+      "requirements": "Ph.D. in Mathematics with publications in peer-reviewed journals."
+    },
+    {
+      "id": 9,
+      "title": "React Native App Developer",
+      "company": "Appify Labs",
+      "location": "Remote",
+      "salary": "₹8,00,000 - ₹14,00,000",
+      "category": "technology",
+      "type": "remote",
+      "description": "Build high-performance cross-platform mobile apps.",
+      "requirements": "2+ years of React Native, Redux, and Firebase experience."
+    },
+    {
+      "id": 10,
+      "title": "SEO Copywriter",
+      "company": "ContentKings",
+      "location": "Remote",
+      "salary": "₹4,00,000 - ₹7,00,000",
+      "category": "marketing",
+      "type": "part-time",
+      "description": "Write persuasive, SEO-optimized articles and landing page copies.",
+      "requirements": "Flawless English, understanding of keyword density and SEO tools."
+    },
+    {
+      "id": 11,
+      "title": "Investment Banker",
+      "company": "Wealth Builders",
+      "location": "Delhi, DL",
+      "salary": "₹20,00,000 - ₹35,00,000",
+      "category": "finance",
+      "type": "full-time",
+      "description": "Manage corporate mergers, acquisitions, and restructuring.",
+      "requirements": "MBA from tier-1 college and strong quantitative skills."
+    },
+    {
+      "id": 12,
+      "title": "Pediatrician",
+      "company": "City Children's Hospital",
+      "location": "Kolkata, WB",
+      "salary": "₹18,00,000 - ₹25,00,000",
+      "category": "healthcare",
+      "type": "full-time",
+      "description": "Provide medical care to infants, children, and adolescents.",
+      "requirements": "MD in Pediatrics and state medical council registration."
+    },
+    {
+      "id": 13,
+      "title": "High School Science Teacher",
+      "company": "Delhi Public School",
+      "location": "Delhi, DL",
+      "salary": "₹6,00,000 - ₹8,50,000",
+      "category": "education",
+      "type": "full-time",
+      "description": "Teach Physics and Chemistry to high school students.",
+      "requirements": "M.Sc., B.Ed., and minimum 3 years teaching experience."
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user",
+      "password": "password",
+      "name": "Regular User"
+    }
+  ],
+  "admins": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "password",
+      "name": "System Admin"
+    }
+  ],
+  "applications": [
+    {
+      "id": 1773914009337,
+      "username": "user",
+      "jobId": 2,
+      "applicantName": "Prathamesh Giri",
+      "applicantEmail": "prathameshgiri8607@gmail.com",
+      "status": "Pending",
+      "appliedAt": "2026-03-19T09:53:29.337Z"
+    },
+    {
+      "id": 1773915084375,
+      "username": "user",
+      "jobId": 2,
+      "applicantName": "Prathamesh Giri",
+      "applicantEmail": "prathame@gmail.com",
+      "status": "Pending",
+      "appliedAt": "2026-03-19T10:11:24.375Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1773916884308,
+      "firstName": "Prathamesh",
+      "lastName": "Giri",
+      "email": "prathameshgiri8607@gmail.com",
+      "message": "test",
+      "submittedAt": "2026-03-19T10:41:24.308Z"
+    }
+  ]
+}

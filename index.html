@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerConnect - Find Your Dream Job</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo" onclick="showSection('home')">
+                    <i class="fas fa-briefcase"></i> CareerConnect
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#" onclick="showSection('jobs')">Find Jobs</a></li>
+                    <li><a href="#" onclick="showSection('employers')">For Employers</a></li>
+                    <li><a href="#" onclick="showSection('about')">About</a></li>
+                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="btn btn-outline" id="navLoginBtn" onclick="showSection('login')">Login</button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <!-- Hero Section -->
+            <div class="hero" style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); padding: 100px 0 120px 0; border-radius: 0 0 50px 50px; position: relative; overflow: hidden;">
+                <div class="hero-bg-shapes" style="position:absolute; top:0; left:0; right:0; bottom:0; z-index:0; opacity: 0.4;">
+                    <div style="position:absolute; top:-50px; right:-50px; width:300px; height:300px; background:var(--primary-color); border-radius:50%; filter:blur(80px);"></div>
+                    <div style="position:absolute; bottom:-100px; left:-50px; width:400px; height:400px; background:var(--accent-color); border-radius:50%; filter:blur(100px);"></div>
+                </div>
+                <div class="container" style="position: relative; z-index: 1;">
+                    <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                        <span style="display:inline-block; padding: 8px 16px; background: rgba(79, 70, 229, 0.1); color: var(--primary-color); border-radius: 30px; font-weight: 600; margin-bottom: 20px; font-size: 0.9rem;">🚀 Over 10,000+ Jobs Available</span>
+                        <h1 style="font-size: 3.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; color: #1f2937;">Find Your <span style="background: linear-gradient(to right, var(--primary-color), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Dream Job</span> Today</h1>
+                        <p style="font-size: 1.2rem; color: #4b5563; margin-bottom: 40px;">Discover thousands of job opportunities from top companies around the world and take the next step in your career.</p>
+                        
+                        <div class="search-container" style="background: white; padding: 10px; border-radius: 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+                            <form class="search-form" id="searchForm" style="display: flex; width: 100%; align-items: center;">
+                                <div style="flex: 1; display: flex; align-items: center; padding: 0 20px; border-right: 1px solid #e5e7eb;">
+                                    <i class="fas fa-search" style="color: #9ca3af; margin-right: 10px;"></i>
+                                    <input type="text" style="border: none; outline: none; width: 100%; padding: 15px 0; font-size: 1rem; background:transparent;" placeholder="Job title or keyword" id="searchKeyword">
+                                </div>
+                                <div style="flex: 1; display: flex; align-items: center; padding: 0 20px;">
+                                    <i class="fas fa-map-marker-alt" style="color: #9ca3af; margin-right: 10px;"></i>
+                                    <input type="text" style="border: none; outline: none; width: 100%; padding: 15px 0; font-size: 1rem; background:transparent;" placeholder="Location" id="searchLocation">
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="border-radius: 40px; padding: 15px 40px; margin: 5px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);">
+                                    Search Jobs
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <div style="margin-top: 30px; color: #6b7280; font-size: 0.95rem;">
+                            Popular Searches: <span style="color: var(--primary-color); cursor: pointer; margin: 0 5px; font-weight: 500;">Designer</span>, <span style="color: var(--primary-color); cursor: pointer; margin: 0 5px; font-weight: 500;">Developer</span>, <span style="color: var(--primary-color); cursor: pointer; margin: 0 5px; font-weight: 500;">Manager</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Categories -->
+            <div class="categories">
+                <div class="container">
+                    <h2 class="section-title">Browse by Category</h2>
+                    <p class="text-center mb-2">Explore jobs in popular categories</p>
+                    
+                    <div class="category-grid">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Technology</h3>
+                            <p>1,240 jobs available</p>
+                        </div>
+                        
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Marketing</h3>
+                            <p>850 jobs available</p>
+                        </div>
+                        
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h3>Finance</h3>
+                            <p>920 jobs available</p>
+                        </div>
+                        
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-stethoscope"></i>
+                            </div>
+                            <h3>Healthcare</h3>
+                            <p>1,150 jobs available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How It Works -->
+            <div class="how-it-works" style="padding: 80px 0; background: #fff;">
+                <div class="container">
+                    <div style="text-align: center; margin-bottom: 50px;">
+                        <h2 style="font-size: 2.5rem; color: #1f2937; margin-bottom: 15px; font-weight: 800;">How It Works</h2>
+                        <p style="color: #6b7280; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Get hired in 3 easy steps. We make the process simple and straightforward.</p>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: center;">
+                        <div style="padding: 40px 30px; border-radius: 20px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.03); background: #f9fafb; border: 1px solid #f3f4f6;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.03)';">
+                            <div style="width: 80px; height: 80px; background: rgba(79, 70, 229, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: var(--primary-color); font-size: 2rem;">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #1f2937; font-weight: 700;">1. Create Account</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">Sign up as a user and tell us about your skills, experience, and career goals.</p>
+                        </div>
+                        
+                        <div style="padding: 40px 30px; border-radius: 20px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.03); background: #f9fafb; border: 1px solid #f3f4f6;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.03)';">
+                            <div style="width: 80px; height: 80px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: var(--accent-color); font-size: 2rem;">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #1f2937; font-weight: 700;">2. Search Jobs</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">Browse thousands of job listings matching your profile to find the perfect fit.</p>
+                        </div>
+                        
+                        <div style="padding: 40px 30px; border-radius: 20px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.03); background: #f9fafb; border: 1px solid #f3f4f6;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.03)';">
+                            <div style="width: 80px; height: 80px; background: rgba(245, 158, 11, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: #f59e0b; font-size: 2rem;">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #1f2937; font-weight: 700;">3. Apply Easily</h3>
+                            <p style="color: #6b7280; line-height: 1.6;">Submit your application with a single click and get hired by top companies effortlessly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Companies -->
+            <div class="featured-companies" style="padding: 60px 0 80px 0; background: #fff; border-top: 1px solid #f3f4f6;">
+                <div class="container text-center">
+                    <h3 style="font-size: 1.2rem; color: #9ca3af; margin-bottom: 30px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">Trusted by leading companies worldwide</h3>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px; opacity: 0.5; filter: grayscale(100%); transition: all 0.3s;">
+                        <span style="font-size: 2rem; font-weight: 800; color: #1f2937;"><i class="fab fa-amazon"></i> Amazon</span>
+                        <span style="font-size: 2rem; font-weight: 800; color: #1f2937;"><i class="fab fa-google"></i> Google</span>
+                        <span style="font-size: 2rem; font-weight: 800; color: #1f2937;"><i class="fab fa-microsoft"></i> Microsoft</span>
+                        <span style="font-size: 2rem; font-weight: 800; color: #1f2937;"><i class="fab fa-apple"></i> Apple</span>
+                        <span style="font-size: 2rem; font-weight: 800; color: #1f2937;"><i class="fab fa-spotify"></i> Spotify</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Listings Section -->
+        <section id="jobs" class="section hidden" style="padding: 60px 0; background: #f8fafc; min-height: 100vh;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h2 class="section-title" style="font-size: 2.8rem; font-weight: 800; color: #1e293b; margin-bottom: 15px;">Discover <span style="color: var(--primary-color);">Opportunities</span></h2>
+                    <p style="color: #64748b; font-size: 1.1rem;">Browse the latest job openings curated exactly for your skillset.</p>
+                </div>
+                
+                <div class="filters" style="background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); margin-bottom: 40px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-end;">
+                    <div class="filter-group" style="flex: 1; min-width: 150px;">
+                        <label class="filter-label" style="font-weight: 600; color: #475569; margin-bottom: 8px;">Job Category</label>
+                        <select class="search-input" id="filterCategory" style="border-radius: 12px; padding: 12px 15px; border: 1px solid #cbd5e1; width: 100%; outline: none;">
+                            <option value="">All Categories</option>
+                            <option value="technology">Technology</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="finance">Finance</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="education">Education</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group" style="flex: 1; min-width: 150px;">
+                        <label class="filter-label" style="font-weight: 600; color: #475569; margin-bottom: 8px;">Location</label>
+                        <select class="search-input" id="filterLocation" style="border-radius: 12px; padding: 12px 15px; border: 1px solid #cbd5e1; width: 100%; outline: none;">
+                            <option value="">All Locations</option>
+                            <option value="new-york">New York</option>
+                            <option value="san-francisco">San Francisco</option>
+                            <option value="london">London</option>
+                            <option value="berlin">Berlin</option>
+                            <option value="tokyo">Tokyo</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group" style="flex: 1; min-width: 150px;">
+                        <label class="filter-label" style="font-weight: 600; color: #475569; margin-bottom: 8px;">Salary Range</label>
+                        <select class="search-input" id="filterSalary" style="border-radius: 12px; padding: 12px 15px; border: 1px solid #cbd5e1; width: 100%; outline: none;">
+                            <option value="">Any Salary</option>
+                            <option value="0-50000">$0 - $50,000</option>
+                            <option value="50000-100000">$50,000 - $100,000</option>
+                            <option value="100000-150000">$100,000 - $150,000</option>
+                            <option value="150000+">$150,000+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group" style="flex: 0; min-width: 150px;">
+                        <button class="btn btn-primary" onclick="filterJobs()" style="width: 100%; border-radius: 12px; padding: 12px 25px;">
+                            <i class="fas fa-filter"></i> Apply Filters
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="jobs-grid" id="jobsContainer">
+                    <!-- Job cards will be dynamically inserted here -->
+                </div>
+                
+                <div class="pagination" id="pagination">
+                    <!-- Pagination will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Application Form -->
+        <section id="application" class="section hidden">
+            <div class="job-listings">
+                <div class="container">
+                    <h2 class="section-title">Apply for Job</h2>
+                    
+                    <div class="application-form" id="applicationForm">
+                        <!-- Application form will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Section -->
+        <section id="login" class="section hidden">
+            <div class="job-listings">
+                <div class="container login-container" style="max-width: 500px; margin: 0 auto; text-align: left;">
+                    <h2 class="section-title text-center">User Login</h2>
+                    <p class="text-center mb-2">Login to your account below.</p>
+
+                    <div class="card" style="box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 10px; transition: transform 0.3s ease-in-out;" id="loginCard">
+                        <!-- User Login Form -->
+                        <form id="userLoginForm">
+                            <p style="font-size: 14px; margin-bottom: 15px; color: var(--text-color);">Demo: user / password</p>
+                            <div class="form-group">
+                                <label class="form-label">Username</label>
+                                <input type="text" class="form-control" id="uLoginUser" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control" id="uLoginPass" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">Login as User</button>
+                            <button type="button" class="btn btn-outline" style="width: 100%; border-style: dashed;" onclick="fillDemoCredentials('user')">
+                                <i class="fas fa-magic"></i> Autofill Demo Credentials
+                            </button>
+                        </form>
+                        
+                        <div id="loginError" style="color: red; margin-top: 10px; text-align: center;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Other Sections (About, Contact, etc.) -->
+        <section id="about" class="section hidden" style="padding: 80px 0; background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 60px;">
+                    <span style="display:inline-block; padding: 8px 16px; background: rgba(79, 70, 229, 0.1); color: var(--primary-color); border-radius: 30px; font-weight: 600; margin-bottom: 15px;">Target Your Future</span>
+                    <h2 style="font-size: 3rem; font-weight: 800; color: #1e293b; margin-bottom: 20px;">About CareerConnect</h2>
+                    <p style="font-size: 1.1rem; color: #64748b; max-width: 700px; margin: 0 auto;">Bridging the gap between extraordinary talent and world-class organizations since 2020.</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: center;">
+                    <div style="background: #fff; border: 1px solid #f1f5f9; padding: 50px 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fas fa-bullseye" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 25px;"></i>
+                        <h3 style="font-size: 1.8rem; color: #1e293b; margin-bottom: 15px; font-weight: 800;">Our Mission</h3>
+                        <p style="color: #64748b; line-height: 1.7;">To empower professionals worldwide by providing access to the best career opportunities, while supplying companies with exceptional human capital through cutting-edge technology.</p>
+                    </div>
+                    <div style="background: #fff; border: 1px solid #f1f5f9; padding: 50px 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fas fa-eye" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 25px;"></i>
+                        <h3 style="font-size: 1.8rem; color: #1e293b; margin-bottom: 15px; font-weight: 800;">Our Vision</h3>
+                        <p style="color: #64748b; line-height: 1.7;">Creating a borderless talent ecosystem where skills are the sole currency of hiring, eliminating biases and making job hunting seamlessly intelligent and deeply personalized.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section hidden" style="padding: 100px 0; background: #f8fafc;">
+            <div class="container">
+                <div style="background: #fff; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px; padding: 60px; background: linear-gradient(135deg, var(--primary-color) 0%, #312e81 100%); color: white; position: relative; overflow: hidden;">
+                        <div style="position: absolute; right: -50px; top: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; filter: blur(30px);"></div>
+                        <div style="position: absolute; left: -50px; bottom: -50px; width: 300px; height: 300px; background: rgba(16, 185, 129, 0.2); border-radius: 50%; filter: blur(40px);"></div>
+                        <div style="position: relative; z-index: 1;">
+                            <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">Get in Touch</h2>
+                            <p style="color: #e0e7ff; font-size: 1.1rem; line-height: 1.6; margin-bottom: 40px;">Have questions about our platform or need support with your application? Our dedicated team is here to help 24/7.</p>
+                            
+                            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                                <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <p style="color: #a5b4fc; font-size: 0.9rem;">Email Support</p>
+                                    <h4 style="font-size: 1.2rem; font-weight: 600;">support@careerconnect.com</h4>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                                <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;"><i class="fas fa-phone-alt"></i></div>
+                                <div>
+                                    <p style="color: #a5b4fc; font-size: 0.9rem;">Call Us Now</p>
+                                    <h4 style="font-size: 1.2rem; font-weight: 600;">+91 (800) 123-4567</h4>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 20px;">
+                                <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <p style="color: #a5b4fc; font-size: 0.9rem;">Headquarters</p>
+                                    <h4 style="font-size: 1.2rem; font-weight: 600;">123 Tech Park, Cyber City, IN</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="flex: 1.5; min-width: 300px; padding: 60px;">
+                        <h3 style="font-size: 1.8rem; color: #1e293b; margin-bottom: 30px; font-weight: 800;">Send us a message</h3>
+                        <form id="contactForm" onsubmit="submitContactForm(event)">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                                <div>
+                                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #475569; font-size: 0.9rem;">First Name</label>
+                                    <input type="text" id="contactFirstName" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #cbd5e1; outline: none; background: #f8fafc;" required placeholder="John">
+                                </div>
+                                <div>
+                                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #475569; font-size: 0.9rem;">Last Name</label>
+                                    <input type="text" id="contactLastName" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #cbd5e1; outline: none; background: #f8fafc;" required placeholder="Doe">
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #475569; font-size: 0.9rem;">Email Address</label>
+                                <input type="email" id="contactEmail" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #cbd5e1; outline: none; background: #f8fafc;" required placeholder="john@example.com">
+                            </div>
+                            <div style="margin-bottom: 30px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #475569; font-size: 0.9rem;">Your Message</label>
+                                <textarea id="contactMessage" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #cbd5e1; outline: none; background: #f8fafc; min-height: 150px; resize: vertical;" required placeholder="How can we help you?"></textarea>
+                            </div>
+                            <div id="contactStatus" style="margin-bottom: 15px; font-weight: 600; font-size: 0.95rem;"></div>
+                            <button type="submit" id="contactSubmitBtn" class="btn btn-primary" style="width: 100%; padding: 16px; border-radius: 12px; font-size: 1.1rem; font-weight: bold; box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);">Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="employers" class="section hidden" style="padding: 100px 0; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+            <div class="container">
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <span style="display:inline-block; padding: 8px 16px; background: rgba(16, 185, 129, 0.1); color: var(--accent-color); border-radius: 30px; font-weight: 600; margin-bottom: 20px;">🏢 For Employers</span>
+                        <h2 style="font-size: 3.5rem; font-weight: 900; color: #1e293b; margin-bottom: 25px; line-height: 1.1;">Hire the <span style="background: linear-gradient(to right, var(--primary-color), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Top 1%</span> of Talent</h2>
+                        <p style="font-size: 1.2rem; color: #475569; margin-bottom: 40px; line-height: 1.6;">CareerConnect gives you powerful integrated tools to attract, manage, and hire the best professionals globally with absolutely zero hassle.</p>
+                        
+                        <div style="display: grid; gap: 25px; margin-bottom: 40px;">
+                            <div style="display: flex; align-items: flex-start; gap: 20px;">
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--primary-color); color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem; box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);"><i class="fas fa-check"></i></div>
+                                <div><h4 style="font-size:1.3rem; color:#1e293b; font-weight: 700; margin-bottom: 5px;">Post Unlimited Jobs</h4><p style="color:#64748b; font-size:1rem;">Reach thousands of highly-qualified candidates instantly.</p></div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 20px;">
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--accent-color); color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);"><i class="fas fa-tasks"></i></div>
+                                <div><h4 style="font-size:1.3rem; color:#1e293b; font-weight: 700; margin-bottom: 5px;">Smart Applicant Tracking</h4><p style="color:#64748b; font-size:1rem;">Manage statuses efficiently with our dedicated ATS portal.</p></div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 20px;">
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: #f59e0b; color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem; box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);"><i class="fas fa-bolt"></i></div>
+                                <div><h4 style="font-size:1.3rem; color:#1e293b; font-weight: 700; margin-bottom: 5px;">Lightning Fast Resumes</h4><p style="color:#64748b; font-size:1rem;">Access our rich database of directly sourced active professionals.</p></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="showSection('login')" style="padding: 18px 45px; font-size: 1.1rem; font-weight: bold; border-radius: 40px; box-shadow: 0 10px 30px rgba(79, 70, 229, 0.4);">Access Employer Portal <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></button>
+                    </div>
+                    <div style="flex: 1; min-width: 300px; padding: 20px; text-align: center;">
+                        <div style="position: relative; display: inline-block;">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Team meeting" style="width: 100%; max-width: 450px; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.15);">
+                            <div style="position: absolute; bottom: -30px; left: -30px; background: white; padding: 25px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 20px;">
+                                <div style="background: rgba(16, 185, 129, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent-color); font-size: 1.8rem;"><i class="fas fa-user-check"></i></div>
+                                <div style="text-align: left;">
+                                    <h4 style="font-size: 1.5rem; font-weight: 800; color: #1e293b;">15,000+</h4>
+                                    <p style="font-size: 1rem; color: #64748b; font-weight: 500;">Successful Hires</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CareerConnect</h3>
+                    <p>Connecting talent with opportunity. Find your dream job or the perfect candidate with our modern job portal.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showSection('home')">Home</a></li>
+                        <li><a href="#" onclick="showSection('jobs')">Find Jobs</a></li>
+                        <li><a href="#" onclick="showSection('employers')">For Employers</a></li>
+                        <li><a href="#" onclick="showSection('about')">About Us</a></li>
+                        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Job Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Healthcare</a></li>
+                        <li><a href="#">Education</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter to get updates on new job opportunities.</p>
+                    <form>
+                        <input type="email" class="form-control mb-1" placeholder="Your email address">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 CareerConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="script/main.js"></script>
+    <script src="script/jobs.js"></script>
+    <script src="script/application.js"></script>
+    <script src="script/admin.js"></script>
+</body>
+</html>
